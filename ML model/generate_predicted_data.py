@@ -32,7 +32,6 @@ def generate_synthetic_data(num_rows=500) -> pd.DataFrame:
         "Ticket Class": [choice(ticket_classes) for _ in range(num_rows)],
         "Departure Station": [choice(stations) for _ in range(num_rows)],
         "Arrival Destination": [choice(stations) for _ in range(num_rows)],
-        # إضافة أعمدة وصفية لبيانات الرحلة التي قد تكون مطلوبة في Power BI
         "Purchase Type": [choice(['Online', 'Station']) for _ in range(num_rows)],
         "Time of Purchase": [f"{randint(0, 23):02d}:{randint(0, 59):02d}:00" for _ in range(num_rows)],
     }
